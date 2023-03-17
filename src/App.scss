@@ -112,17 +112,22 @@
     border: 1px solid white;
     border-radius: 10px;
     width: 65%;
-    height: 80%;
+    height: 90%;
     display: flex;
     overflow: hidden;
     @include tablet {
-      width: 90%;
+      width: 100%;
+    }
+
+    @include mobile {
+      width: 88%;
     }
 
     .sidebar {
       flex: 1;
       background-color: #3e3c61;
       position: relative;
+      height: 100vh;
 
       .navbar {
         display: flex;
@@ -147,23 +152,18 @@
 
           img {
             background-color: #ddddf7;
-            height: 24px;
-            width: 24px;
+            height: 50px;
+            width: 50px;
             border-radius: 50%;
             object-fit: cover;
           }
-
-          button {
-            background-color: #5d5b8d;
-            color: #ddddf7;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            @include tablet {
-              position: absolute;
-              bottom: 10px;
-            }
-          }
+        }
+        button {
+          background-color: #5d5b8d;
+          color: #ddddf7;
+          border: none;
+          cursor: pointer;
+          border-radius: 5px;
         }
       }
       .search {
@@ -187,9 +187,8 @@
       }
 
       .userChat {
-        padding: 10px;
         display: flex;
-        align-items: center;
+        padding: 10px;
         gap: 10px;
         color: white;
         cursor: pointer;
@@ -219,6 +218,7 @@
     }
     .chat {
       flex: 2;
+      height: 100%;
 
       .chatInfo {
         height: 50px;
@@ -228,15 +228,50 @@
         justify-content: space-between;
         padding: 10px;
         color: lightgray;
+
+        .chatUser {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          button {
+            background-color: transparent;
+            border: 0;
+            color: white;
+
+            &:hover {
+              background-color: #2f2d52;
+              border-radius: 20%;
+            }
+          }
+
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+        }
       }
 
       .chatIcons {
         display: flex;
         gap: 10px;
 
-        img {
-          height: 24px;
-          cursor: pointer;
+        button {
+          background-color: transparent;
+          border: 0;
+          color: white;
+
+          &:hover {
+            background-color: #2f2d52;
+            border-radius: 20%;
+          }
+
+          img {
+            height: 24px;
+            cursor: pointer;
+          }
         }
       }
 
@@ -250,9 +285,15 @@
         height: calc(100% - 160px);
         overflow-y: scroll;
 
+        span {
+          font-weight: bold;
+          color: #5d5b8d;
+          font-size: 12px;
+        }
+
         .message {
           display: flex;
-          gap: 20px;
+          gap: 12px;
           margin-bottom: 20px;
 
           .messageInfo {
@@ -261,6 +302,8 @@
             color: rgb(18, 17, 17);
             font-weight: 300;
             font-weight: bold;
+            align-items: center;
+            gap: 5px;
 
             img {
               width: 40px;
@@ -273,6 +316,7 @@
             max-width: 80%;
             display: flex;
             flex-direction: column;
+
             gap: 10px;
 
             p {
@@ -339,6 +383,11 @@
             border-radius: 2rem;
             background-color: #8da4f1;
             cursor: pointer;
+
+            &:hover {
+              background-color: #625fa1;
+              border-radius: 2rem;
+            }
           }
         }
       }

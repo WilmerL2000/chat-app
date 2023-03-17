@@ -3,6 +3,7 @@ import { ToastContainer } from 'react-toastify';
 import { Routes, Route } from 'react-router-dom';
 import { Register, Home, Login } from '../pages';
 import { PrivateRoute, PublicRoute } from './';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AppRouter = () => {
   return (
@@ -35,7 +36,7 @@ const AppRouter = () => {
           />
         </Route>
       </Routes>
-      <ToastContainer />
+      <ToastContainer autoClose={2500} />
     </>
   );
 };

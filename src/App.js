@@ -1,11 +1,13 @@
 import './App.scss';
-import { AuthProvider } from './context/AuthProvider';
+import { AuthProvider, ChatProvider } from './context';
 import { AppRouter } from './router';
 
 function App() {
   return (
     <AuthProvider>
-      <AppRouter />
+      <ChatProvider>
+        <AppRouter />
+      </ChatProvider>
     </AuthProvider>
   );
 }

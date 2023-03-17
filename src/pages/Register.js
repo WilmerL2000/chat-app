@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { auth, db, storage } from '../firebase';
 import { doc, setDoc } from 'firebase/firestore';
+import { toast } from 'react-toastify';
 import { useForm } from '../hooks/useForm';
 import Add from '../img/addAvatar.png';
+import { Loader } from '../components';
 
 const Register = () => {
-  const [err, setErr] = useState(false);
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
 
   const {
     displayName,
@@ -62,17 +62,14 @@ const Register = () => {
 
             //create empty user chats on firestore
             await setDoc(doc(db, 'userChats', response.user.uid), {});
-            navigate('/');
           } catch (err) {
-            console.log(err);
-            setErr(true);
+            toast.error('Something went wrong');
             setLoading(false);
           }
         });
       });
     } catch (error) {
-      console.log(err);
-      setErr(true);
+      toast.error('Something went wrong');
       setLoading(false);
     }
   };
@@ -82,6 +79,7 @@ const Register = () => {
       <div className="formWrapper">
         <span className="logo">ChatIn</span>
         <span className="title">Register</span>
+        <img src={file} alt="" />
         <form onSubmit={handleSubmit}>
           <input
             required
@@ -119,9 +117,9 @@ const Register = () => {
             <img src={Add} alt="" />
             <span>Add an avatar</span>
           </label>
-          <button disabled="">Sign up</button>
-          {loading && 'Uploading and compressing the image please wait...'}
-          {err && <span>Something went wrong</span>}
+          <button disabled={loading}>
+            {!loading ? 'Sign up' : <Loader />}
+          </button>
         </form>
         <p>
           You do have an account? <Link to="/login">Login</Link>

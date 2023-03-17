@@ -6,5 +6,16 @@ import Seacrh from './Search';
 import Message from './Message';
 import Messages from './Messages';
 import Navbar from './Navbar';
+import Loader from './loader/Loader';
 
-export { Chat, Chats, Sidebar, Input, Seacrh, Message, Navbar, Messages };
+export {
+  Chat,
+  Chats,
+  Sidebar,
+  Input,
+  Seacrh,
+  Message,
+  Navbar,
+  Messages,
+  Loader,
+};

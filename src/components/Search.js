@@ -15,7 +15,7 @@ import { AuthContext } from '../context/AuthContext';
 import { useForm } from '../hooks/useForm';
 
 const Search = () => {
-  const { username, onInputChange } = useForm({ username: '' });
+  const { username, onInputChange, onResetForm } = useForm({ username: '' });
   const [user, setUser] = useState(null);
   const [err, setErr] = useState(false);
 
@@ -46,7 +46,47 @@ const Search = () => {
 
   const handleSelect = async () => {
     //check whether the group(chats in firestore) exists, if not create
-    //create user chats
+    /* Creating a unique id for the chat. */
+    const combinedId =
+      currentUser.uid > user.uid
+        ? currentUser.uid + user.uid
+        : user.uid + currentUser.uid;
+
+    try {
+      /* Getting the document from the chats collection with the id of combinedId. */
+      const response = await getDoc(doc(db, 'chats', combinedId));
+
+      if (!response.exists()) {
+        /* Creating a document in the chats collection with the id of combinedId and setting the
+        messages property to an empty array. */
+        await setDoc(doc(db, 'chats', combinedId), { messages: [] });
+
+        //create user chats
+        /* Updating the document in the userChats collection with the id of the current user. */
+        await updateDoc(doc(db, 'userChats', currentUser.uid), {
+          [combinedId + '.userInfo']: {
+            uid: user.uid,
+            displayName: user.displayName,
+            photoURL: user.photoURL,
+          },
+          [combinedId + '.date']: serverTimestamp(),
+        });
+
+        /* Updating the document in the userChats collection with the id of the user that is being
+        searched for. */
+        await updateDoc(doc(db, 'userChats', user.uid), {
+          [combinedId + '.userInfo']: {
+            uid: currentUser.uid,
+            displayName: currentUser.displayName,
+            photoURL: currentUser.photoURL,
+          },
+          [combinedId + '.date']: serverTimestamp(),
+        });
+      }
+    } catch (error) {}
+
+    setUser(null);
+    onResetForm();
   };
 
   return (

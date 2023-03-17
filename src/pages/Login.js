@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
 import { useForm } from '../hooks/useForm';
+import { toast } from 'react-toastify';
 
 const Login = () => {
-  const [err, setErr] = useState(false);
   const navigate = useNavigate();
 
   const { email, password, onInputChange } = useForm({
@@ -22,7 +22,7 @@ const Login = () => {
       await signInWithEmailAndPassword(auth, email, password);
       navigate('/');
     } catch (err) {
-      setErr(true);
+      toast.error('Something went wrong');
     }
   };
 
@@ -47,7 +47,6 @@ const Login = () => {
             placeholder="Password"
           />
           <button>Sign in</button>
-          {err && <span>Something went wrong</span>}
         </form>
         <p>
           You don't have an account? <Link to="/register">Register</Link>

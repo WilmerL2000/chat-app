@@ -13,10 +13,10 @@ const Navbar = () => {
       <div className="user">
         <img src={currentUser.photoURL} alt="UserPhoto" />
         <span>{currentUser.displayName}</span>
-        <button onClick={() => signOut(auth)}>
-          <ArrowLeftOnRectangleIcon style={{ height: '22px', width: '22px' }} />
-        </button>
       </div>
+      <button onClick={() => signOut(auth)}>
+        <ArrowLeftOnRectangleIcon style={{ height: '30px', width: '30px' }} />
+      </button>
     </div>
   );
 };
