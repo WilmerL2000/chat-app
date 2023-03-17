@@ -10,7 +10,6 @@ export const AuthProvider = ({ children }) => {
     /* A function that is called when the user is logged in or logged out. */
     const unsub = onAuthStateChanged(auth, (user) => {
       setcurrentUser(user);
-      console.log(user);
     });
 
     return () => {
