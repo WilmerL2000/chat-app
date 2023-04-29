@@ -147,7 +147,7 @@ _Follow the instructions below_
    ```sh
    https://firebase.google.com/
    ```
-4. Starts the Storage & Firestore Database sections
+4. Starts the Authentication, Storage & Firestore Database sections
 
 5. Get & Enter your API KEYS in `.env` file
    ```js
