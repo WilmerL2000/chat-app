@@ -1,70 +1,172 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- PROJECT LOGO -->
+<div align="center">
+  <h1 align="center">Chat App</h1>
+    <img src="https://res.cloudinary.com/wils09/image/upload/v1682739964/GitHub/chatIn-app/main_chats_xrybg6.png" width="100%" >
+  <p align="center">
+    <a href="https://chatin-app.vercel.app/login" target="_blank">Web Page</a>
+  </p>
+</div>
 
-## Available Scripts
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>
+    <strong>
+        Table of Contents
+    </strong>
+  </summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#tech-stack">Tech Stack</a></li>
+        <li><a href="#features">Features</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#usage">Usage</a>
+      <ul>
+        <li><a href="#desktop">Desktop</a></li>
+        <li><a href="#mobile">Mobile</a></li>
+      </ul>
+    </li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-In the project directory, you can run:
+<!-- ABOUT THE PROJECT -->
 
-### `npm start`
+## About The Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+In this project you will be able to have different chats with several users, as well as having a 1 to 1 conversation with each user.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Features
 
-### `npm test`
+- Register in the application
+- Search for the person you want to talk to
+- Messages in real time
+- Have multiple chats
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Tech Stack
 
-### `npm run build`
+<table>
+    <tr>
+      <td align="center" width="96">          
+        <br><strong>Tech</strong>
+      </td>           
+      <td align="center" width="96">
+          <img src="https://res.cloudinary.com/wils09/image/upload/v1682487163/GitHub/assets/react_original_logo_icon_146374_whazfv.png" width="48" height="48" alt="React" />
+        <br><strong>React</strong>        
+      </td>      
+      <td align="center" width="96">
+          <img src="https://res.cloudinary.com/wils09/image/upload/v1682740139/GitHub/assets/firebase_yhvith.png" width="48" height="48" alt="Material UI" />
+        <br><strong>Firebase</strong>        
+      </td>     
+      <td align="center" width="96">
+          <img src="https://res.cloudinary.com/wils09/image/upload/v1682740142/GitHub/assets/sass_qtjajn.png" width="48" height="48" alt="Axios" />
+        <br><strong>Sass</strong>        
+      </td>     
+    </tr>
+     <tr>
+      <td align="center" width="96">          
+        <br><strong>Version</strong>
+      </td>      
+      <td align="center" width="96">
+        <br>18.2.0
+      </td>     
+      <td align="center" width="96">
+        <br>9.17.2
+      </td>     
+      <td align="center" width="96">
+        <br>1.59.3
+      </td>     
+    </tr>
+  </table>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- USAGE EXAMPLES -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+### Desktop
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<div align="center">
+  <div>
+    <h3>Login & Register</h3>
+    <img src="https://res.cloudinary.com/wils09/image/upload/v1682739964/GitHub/chatIn-app/login_j45tmv.png" width="100%" >
+    <img src="https://res.cloudinary.com/wils09/image/upload/v1682739964/GitHub/chatIn-app/register_bxqgp5.png" width="100%" >
+  </div>
+  <div>
+    <h3>Chats & Search User</h3>
+    <img src="https://res.cloudinary.com/wils09/image/upload/v1682739964/GitHub/chatIn-app/main_chats_xrybg6.png" width="100%" >
+  </div>
+  <div>
+    <h3>Chat</h3>
+    <img src="https://res.cloudinary.com/wils09/image/upload/v1682739965/GitHub/chatIn-app/chat_exwrlx.png" width="100%" >
+  </div>
+</div>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Mobile
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<div align="center">
+  <div>
+    <img src="https://res.cloudinary.com/wils09/image/upload/v1682739965/GitHub/chatIn-app/mobile1_vl0o0z.png" width="100%" >
+  </div>
+  <div>
+    <img src="https://res.cloudinary.com/wils09/image/upload/v1682739966/GitHub/chatIn-app/mobile2_gyuwrc.png" width="100%" >
+  </div>
+</div>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Learn More
+<!-- GETTING STARTED -->
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Getting Started
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+_Follow the instructions below_
 
-### Code Splitting
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Clone the repo
+   ```sh
+   git clone https://github.com/WilmerL2000/chat-app.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Go to firebase and start a project
+   ```sh
+   https://firebase.google.com/
+   ```
+4. Starts the Storage & Firestore Database sections
 
-### Analyzing the Bundle Size
+5. Get & Enter your API KEYS in `.env` file
+   ```js
+   API_KEY = 'ENTER YOUR API';
+   ```
+6. Start project
+   ```sh
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Making a Progressive Web App
+<!-- CONTACT -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contact
 
-### Advanced Configuration
+`Wilmer Lopez Cespedes`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Correo: wilmerlopezcespedes@gmail.com
+- <a href="https://www.linkedin.com/in/wilmer-lopez-cespedes/" target="_blank">LinkedIn</a>
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
